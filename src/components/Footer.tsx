@@ -23,9 +23,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Left - Logo and Description */}
           <div className="space-y-4">
-            <img src={logo} alt="PNSPT Logo" className="h-12 w-auto" />
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">★</span>
+              </div>
+              <span className="text-xl font-bold text-[#333333]">PNSPT</span>
+            </div>
             <p className="text-sm text-[#333333] leading-relaxed">
-              We offer a comprehensive suite of digital marketing services that cover all aspects
+              We offers a comprehensive suite of digital marketing services that cover all aspects
               of our online presence. From SEO and social media marketing to content creation and
               PPC advertising, they have the expertise and resources to handle our diverse
               marketing needs.
@@ -35,12 +40,12 @@ const Footer = () => {
           {/* Center - Navigation Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-[#222222]">Pages</h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="block text-sm text-[#333333] hover:text-primary transition-colors"
+                  className="block text-sm text-[#666666] hover:text-primary transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -53,16 +58,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-[#222222]">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-primary" />
-                <span className="text-sm text-[#222222]">(406) 555-0120</span>
+                <Phone className="h-4 w-4 text-primary flex-shrink-0" />
+                <span className="text-sm text-[#666666]">(406) 555-0120</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-primary" />
-                <span className="text-sm text-[#222222]">hey@boostim.com</span>
+                <Mail className="h-4 w-4 text-primary flex-shrink-0" />
+                <span className="text-sm text-[#666666]">Hey@boostim.com</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 text-primary mt-0.5" />
-                <span className="text-sm text-[#222222]">
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-[#666666]">
                   2972 Westheimer Rd. Santa Ana,<br />
                   Illinois 85486
                 </span>
@@ -72,19 +77,19 @@ const Footer = () => {
         </div>
 
         {/* Bottom - Copyright and Social Icons */}
-        <div className="border-t border-gray-200 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-200 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-sm text-[#444444]">
                 © {new Date().getFullYear()} Prakash Nanjappa Sports Promotion Trust. All rights reserved.
               </p>
             </div>
-            <div className="flex space-x-6">
+            <div className="flex space-x-4">
               {socialLinks.map(({ Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
-                  className="text-[#444444] hover:text-primary transition-colors"
+                  className="text-[#444444] hover:text-primary transition-colors p-2"
                   aria-label={label}
                 >
                   <Icon className="h-5 w-5" />

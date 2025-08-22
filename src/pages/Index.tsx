@@ -260,30 +260,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call to Action Banner - Overlapping Footer */}
-      <div className="relative">
-        <div className="absolute -bottom-8 left-0 right-0 z-10">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-[#111111] text-white rounded-t-2xl px-8 py-12 lg:px-12 lg:py-16">
-              <div className="flex flex-col lg:flex-row items-center justify-between">
-                <div className="text-center lg:text-left mb-8 lg:mb-0">
-                  <h2 className="text-3xl lg:text-5xl font-bold mb-2">
-                    Be a part of our <span className="text-primary">Mission</span>
-                  </h2>
-                </div>
-                <Button variant="cta" size="xl" className="bg-primary hover:bg-primary-hover">
-                  Contact Us →
-                </Button>
+      {/* Call to Action Banner */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#111111] text-white rounded-t-2xl px-8 py-12 lg:px-12 lg:py-16">
+            <div className="flex flex-col lg:flex-row items-center justify-between">
+              <div className="text-center lg:text-left mb-8 lg:mb-0">
+                <h2 className="text-3xl lg:text-5xl font-bold mb-2">
+                  Be a part of our <span className="text-primary">Mission</span>
+                </h2>
               </div>
+              <Button variant="cta" size="xl" className="bg-primary hover:bg-primary-hover">
+                Contact Us →
+              </Button>
             </div>
           </div>
         </div>
-        
-        {/* Add padding to create space for overlapping CTA */}
-        <div className="pt-32">
-          <Footer />
-        </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
