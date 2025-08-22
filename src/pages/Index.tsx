@@ -262,8 +262,8 @@ const Index = () => {
 
       {/* Call to Action Banner - Overlapping Footer */}
       <div className="relative">
-        <div className="absolute bottom-0 left-0 right-0 z-10">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="absolute -bottom-8 left-0 right-0 z-10">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-[#111111] text-white rounded-t-2xl px-8 py-12 lg:px-12 lg:py-16">
               <div className="flex flex-col lg:flex-row items-center justify-between">
                 <div className="text-center lg:text-left mb-8 lg:mb-0">
