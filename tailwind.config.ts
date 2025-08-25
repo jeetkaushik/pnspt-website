@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'poppins': ['Poppins', 'sans-serif'],
+				'prosto-one': ['Prosto One', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 			},
 			colors: {

@@ -9,7 +9,8 @@ import heroBackground from '@/assets/hero-bg.jpg';
 import athlete1 from '@/assets/athlete1.jpg';
 import athlete2 from '@/assets/athlete2.jpg';
 import athlete3 from '@/assets/athlete3.jpg';
-import founder from '@/assets/founder.jpg';
+import founderAwards from '@/assets/founder-awards.jpg';
+import pnsptLogo from '@/assets/pnspt-logo.png';
 
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -67,15 +68,27 @@ const Index = () => {
             by providing holistic support that covers not just training but every aspect critical to an
             athlete's journey
           </p>
-          <Button variant="hero" className="animate-scale-in">
-            Empowering Lives Through Sports and Skills
-          </Button>
+          <div className="inline-block bg-black/30 px-6 py-3 animate-scale-in">
+            <span className="text-lg md:text-xl font-medium text-white">
+              Empowering Lives Through Sports and Skills
+            </span>
+          </div>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+        {/* Background Logo Watermark */}
+        <div 
+          className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: `url(${pnsptLogo})`,
+            backgroundSize: '400px',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }}
+        ></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 section-animate">
             <div className="flex items-center justify-center mb-4">
               <Target className="h-6 w-6 text-primary mr-2" />
@@ -139,20 +152,22 @@ const Index = () => {
       <section className="py-16 lg:py-24 bg-gray-50 relative">
         <div className="absolute top-0 left-0 w-full h-20 bg-primary transform -skew-y-1 origin-top-left"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center section-animate">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                <Lightbulb className="h-8 w-8 text-primary" />
+          <div className="flex items-center justify-between">
+            <div className="hidden lg:block mr-12">
+              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center">
+                <Lightbulb className="h-12 w-12 text-primary" />
               </div>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Our Vision</h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our initiative focuses on identifying talented para shooters and
-              nurturing them through advanced training and sponsorship
-              opportunities. By establishing world-class infrastructure with
-              international-standard shooting ranges and facilities, we aim to
-              create an environment of excellence.
-            </p>
+            <div className="flex-1 section-animate">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Our Vision</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl">
+                Our initiative focuses on identifying talented para shooters and
+                nurturing them through advanced training and sponsorship
+                opportunities. By establishing world-class infrastructure with
+                international-standard shooting ranges and facilities, we aim to
+                create an environment of excellence.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -191,15 +206,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="section-animate">
               <div className="relative">
-                <div className="grid grid-cols-2 gap-4">
-                  <img src={founder} alt="Prakash Nanjappa" className="rounded-lg shadow-lg" />
-                  <img src={founder} alt="Award Ceremony" className="rounded-lg shadow-lg" />
-                  <img src={founder} alt="Training Session" className="rounded-lg shadow-lg" />
-                  <img src={founder} alt="Olympic Games" className="rounded-lg shadow-lg" />
-                </div>
-                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-primary text-white px-2 py-8 rounded font-bold tracking-widest writing-mode-vertical">
-                  OLYMPIAN
-                </div>
+                <img src={founderAwards} alt="Prakash Nanjappa Awards and Achievements" className="rounded-lg shadow-lg w-full" />
               </div>
             </div>
             
@@ -263,7 +270,7 @@ const Index = () => {
       {/* Call to Action Banner */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#111111] text-white rounded-t-2xl px-8 py-12 lg:px-12 lg:py-16">
+          <div className="bg-[#111111] text-white rounded-2xl px-8 py-12 lg:px-12 lg:py-16">
             <div className="flex flex-col lg:flex-row items-center justify-between">
               <div className="text-center lg:text-left mb-8 lg:mb-0">
                 <h2 className="text-3xl lg:text-5xl font-bold mb-2">

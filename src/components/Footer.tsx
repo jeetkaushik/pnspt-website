@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import pnsptLogo from '@/assets/pnspt-logo.png';
 
 const Footer = () => {
   const socialLinks = [
@@ -23,12 +23,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {/* Left - Logo and Description */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">★</span>
-              </div>
-              <span className="text-xl font-bold text-[#333333]">PNSPT</span>
-            </div>
+          <div className="flex items-center space-x-2">
+            <img src={pnsptLogo} alt="PNSPT Logo" className="h-8 w-auto" />
+            <span className="text-xl font-bold text-[#333333]">PNSPT</span>
+          </div>
             <p className="text-sm text-[#333333] leading-relaxed">
               We offers a comprehensive suite of digital marketing services that cover all aspects
               of our online presence. From SEO and social media marketing to content creation and

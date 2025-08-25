@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import pnsptLogo from '@/assets/pnspt-logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <img src={logo} alt="PNSPT Logo" className="h-10 lg:h-12 w-auto" />
+            <img src={pnsptLogo} alt="PNSPT Logo" className="h-10 lg:h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
