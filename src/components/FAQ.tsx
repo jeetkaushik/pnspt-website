@@ -48,7 +48,19 @@ const FAQ = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* FAQ Accordion - Left Side */}
+          {/* Image - Left Side */}
+          <div className="lg:sticky lg:top-8">
+            <div className="relative">
+              <img
+                src={faqImage}
+                alt="PNSPT Training Facility"
+                className="w-full h-auto rounded-lg shadow-lg object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+            </div>
+          </div>
+
+          {/* FAQ Accordion - Right Side */}
           <div className="space-y-4">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
@@ -62,30 +74,6 @@ const FAQ = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-
-          {/* Image - Right Side */}
-          <div className="lg:sticky lg:top-8">
-            <div className="relative">
-              <img
-                src={faqImage}
-                alt="PNSPT Training Facility"
-                className="w-full h-auto rounded-lg shadow-lg object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg mt-6">
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                Still have questions?
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Can't find the answer you're looking for? Our team is here to help you with any additional questions.
-              </p>
-              <button className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                Contact Us
-              </button>
-            </div>
           </div>
         </div>
       </div>
