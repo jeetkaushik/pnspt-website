@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FAQ from '@/components/FAQ';
 
 const Contact = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -205,6 +206,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>

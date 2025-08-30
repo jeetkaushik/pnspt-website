@@ -4,6 +4,7 @@ import { Target, Award, Users, Medal, BookOpen, Heart } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FeatureCard from '@/components/FeatureCard';
+import FAQ from '@/components/FAQ';
 
 const WhatWeDo = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -185,6 +186,8 @@ const WhatWeDo = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <Footer />
     </div>
